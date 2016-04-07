@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		1AC706531CB5FD3800C99792 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC706521CB5FD3800C99792 /* AppDelegate.swift */; };
-		1AC706551CB5FD3800C99792 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC706541CB5FD3800C99792 /* ViewController.swift */; };
 		1AC706581CB5FD3800C99792 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AC706561CB5FD3800C99792 /* Main.storyboard */; };
 		1AC7065A1CB5FD3800C99792 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AC706591CB5FD3800C99792 /* Assets.xcassets */; };
 		1AC7065D1CB5FD3800C99792 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AC7065B1CB5FD3800C99792 /* LaunchScreen.storyboard */; };
+		1AC706651CB5FD5300C99792 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC706641CB5FD5300C99792 /* LoginViewController.swift */; };
+		1AC706671CB5FDB100C99792 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AC706661CB5FDB100C99792 /* Registration.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1AC7064F1CB5FD3800C99792 /* Carousell_demo_collectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carousell_demo_collectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AC706521CB5FD3800C99792 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1AC706541CB5FD3800C99792 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1AC706571CB5FD3800C99792 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1AC706591CB5FD3800C99792 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1AC7065C1CB5FD3800C99792 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1AC7065E1CB5FD3800C99792 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AC706641CB5FD5300C99792 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1AC706661CB5FDB100C99792 /* Registration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +57,12 @@
 			isa = PBXGroup;
 			children = (
 				1AC706521CB5FD3800C99792 /* AppDelegate.swift */,
-				1AC706541CB5FD3800C99792 /* ViewController.swift */,
 				1AC706561CB5FD3800C99792 /* Main.storyboard */,
+				1AC706641CB5FD5300C99792 /* LoginViewController.swift */,
 				1AC706591CB5FD3800C99792 /* Assets.xcassets */,
 				1AC7065B1CB5FD3800C99792 /* LaunchScreen.storyboard */,
 				1AC7065E1CB5FD3800C99792 /* Info.plist */,
+				1AC706661CB5FDB100C99792 /* Registration.storyboard */,
 			);
 			path = Carousell_demo_collectionView;
 			sourceTree = "<group>";
@@ -123,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AC7065D1CB5FD3800C99792 /* LaunchScreen.storyboard in Resources */,
+				1AC706671CB5FDB100C99792 /* Registration.storyboard in Resources */,
 				1AC7065A1CB5FD3800C99792 /* Assets.xcassets in Resources */,
 				1AC706581CB5FD3800C99792 /* Main.storyboard in Resources */,
 			);
@@ -135,7 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AC706551CB5FD3800C99792 /* ViewController.swift in Sources */,
+				1AC706651CB5FD5300C99792 /* LoginViewController.swift in Sources */,
 				1AC706531CB5FD3800C99792 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
