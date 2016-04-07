@@ -9,6 +9,9 @@
 import UIKit
 
 class RegistrationViewController: UIViewController, UICollectionViewDataSource {
+    
+    //將pageCollectionViewCell加個名，同collectionView關聯
+    private let pageCellReuseIdentifier = "pageCellReuseIdentifier"
 
     @IBOutlet weak var registrationPage: UIPageControl!
     
@@ -17,8 +20,11 @@ class RegistrationViewController: UIViewController, UICollectionViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+    //將cell註冊去呢個collectionView入需
+        self.tutorialCollectionView.registerNib(UINib(nibName: "PageCollectionViewCell", bundle: nil),forCellWithReuseIdentifier: pageCellReuseIdentifier)
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
