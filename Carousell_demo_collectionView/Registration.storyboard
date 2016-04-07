@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Registration View Controller-->
         <scene sceneID="t7F-Uv-y6p">
             <objects>
-                <viewController id="Bwk-NK-4R1" sceneMemberID="viewController">
+                <viewController id="Bwk-NK-4R1" customClass="RegistrationViewController" customModule="Carousell_demo_collectionView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="s4h-FW-y2P"/>
                         <viewControllerLayoutGuide type="bottom" id="DKO-HL-FWC"/>
@@ -105,12 +105,16 @@
                             <mask key="constraints">
                                 <exclude reference="ZSV-li-pbo"/>
                                 <exclude reference="dCF-5y-oJU"/>
+                                <exclude reference="i0c-vy-b9a"/>
                                 <exclude reference="R7G-Bu-Fga"/>
                                 <exclude reference="zUM-G4-219"/>
-                                <exclude reference="i0c-vy-b9a"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="registrationPage" destination="IoV-ob-hGz" id="9AQ-fb-w8v"/>
+                        <outlet property="tutorialCollectionView" destination="OQu-uZ-bGO" id="dSP-A3-Wbd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AYx-6m-LDx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
