@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegistrationViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class RegistrationViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate {
     
     //將pageCollectionViewCell加個名，同collectionView關聯
     private let pageCellReuseIdentifier = "pageCellReuseIdentifier"
@@ -20,7 +20,9 @@ class RegistrationViewController: UIViewController, UICollectionViewDataSource, 
     
     @IBOutlet weak var tutorialCollectionView: UICollectionView!
     
-    let pages = [["image": "p8", "title":"How're you?", "description": "Good morning"],["image": "p9", "title":"How're you?", "description": "Good morning"],["image": "p7", "title":"How're you?", "description": "Good morning"],["image": "p6", "title":"How're you?", "description": "Good morning"]]
+
+    
+    let pages = [[Constants.image: "p8", Constants.title:"How're you?", Constants.description: "Good morning"],[Constants.image: "p9", Constants.title:"How're you?", Constants.description: "Good morning"],[Constants.image: "p7", Constants.title:"How're you?", Constants.description: "Good morning"],[Constants.image: "p6", Constants.title:"How're you?", Constants.description: "Good morning"]]
     
     
     override func viewDidLoad() {
@@ -31,8 +33,23 @@ class RegistrationViewController: UIViewController, UICollectionViewDataSource, 
         
         self.layout.itemSize = CGSize(width: UIScreen.mainScreen().bounds.width, height: UIScreen.mainScreen().bounds.height-148)
         
+        self.registrationPage.numberOfPages = self.pages.count
+        
         
     }
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        let pageNum = round(scrollView.contentOffset.x/UIScreen.mainScreen().bounds.width)
+        self.registrationPage.currentPage = Int(pageNum)
+        
+    }
+    
+    @IBAction func pageChanged(sender: AnyObject) {
+        let x = CGFloat(registrationPage.currentPage) * self.tutorialCollectionView.frame.size.width
+        self.tutorialCollectionView.setContentOffset(CGPointMake(x, 0), animated: true)
+        
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -52,16 +69,20 @@ class RegistrationViewController: UIViewController, UICollectionViewDataSource, 
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        //把cell 指向pageCollectionviewCell 拎裡面既reference 例如pageImage, titleLabel
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(pageCellReuseIdentifier, forIndexPath: indexPath) as! PageCollectionViewCell
         
         //return integer of how many item in the array(pages)
         let page = pages[indexPath.item]
-        cell.pageImageView.image = UIImage(named: page["image"]!)
-        cell.titleLabel.text = page["title"]
-        print(page["title"])
-        cell.descriptionLabel.text = page["description"]
-        print("helle")
+        cell.pageImageView.image = UIImage(named: page[Constants.image]!)
+        cell.titleLabel.text = page[Constants.title]
+        
+        cell.descriptionLabel.text = page[Constants.description]
+        
         // Configure the cell
+        
+        //registrationPage.currentPage = indexPath.item
         
         return cell
     }

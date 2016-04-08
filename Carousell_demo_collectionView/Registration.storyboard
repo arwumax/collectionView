@@ -18,13 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="IoV-ob-hGz">
-                                <rect key="frame" x="281" y="460" width="39" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="ceS-Wg-bbT"/>
-                                </constraints>
-                            </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdU-ae-whl">
                                 <rect key="frame" x="277" y="498" width="46" height="30"/>
                                 <constraints>
@@ -49,12 +42,13 @@
                                 <rect key="frame" x="335" y="570" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OQu-uZ-bGO">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OQu-uZ-bGO">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="452"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="406" id="dpM-7v-THn"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vTS-fh-Qcj">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="vTS-fh-Qcj">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -81,8 +75,19 @@
                                     <outlet property="delegate" destination="Bwk-NK-4R1" id="n5L-QU-TaJ"/>
                                 </connections>
                             </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="IoV-ob-hGz">
+                                <rect key="frame" x="280" y="460" width="39" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ceS-Wg-bbT"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" red="0.62639070679999997" green="0.62639070679999997" blue="0.62639070679999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="pageChanged:" destination="Bwk-NK-4R1" eventType="valueChanged" id="ejZ-Uy-tqY"/>
+                                </connections>
+                            </pageControl>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="OQu-uZ-bGO" firstAttribute="leading" secondItem="eax-Hx-dfv" secondAttribute="leading" id="0UV-jz-fJA"/>
                             <constraint firstItem="MLG-8L-vmu" firstAttribute="baseline" secondItem="9uO-Oo-sJY" secondAttribute="baseline" id="9sV-Ne-Jht"/>

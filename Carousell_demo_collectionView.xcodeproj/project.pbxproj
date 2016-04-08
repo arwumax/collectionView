@@ -16,6 +16,7 @@
 		1AC706691CB605D500C99792 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC706681CB605D500C99792 /* RegistrationViewController.swift */; };
 		1AC7066C1CB6071300C99792 /* PageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7066A1CB6071300C99792 /* PageCollectionViewCell.swift */; };
 		1AC7066D1CB6071300C99792 /* PageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AC7066B1CB6071300C99792 /* PageCollectionViewCell.xib */; };
+		1AC7066F1CB616F900C99792 /* ConstantCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7066E1CB616F900C99792 /* ConstantCollectionView.swift */; };
 		EFB0BC4A828C2E2666B48510 /* Pods_Carousell_demo_collectionView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8475B3A99794B61091FA5BB9 /* Pods_Carousell_demo_collectionView.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		1AC706681CB605D500C99792 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		1AC7066A1CB6071300C99792 /* PageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCollectionViewCell.swift; sourceTree = "<group>"; };
 		1AC7066B1CB6071300C99792 /* PageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageCollectionViewCell.xib; sourceTree = "<group>"; };
+		1AC7066E1CB616F900C99792 /* ConstantCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantCollectionView.swift; sourceTree = "<group>"; };
 		3C10AB9C710069ADFA50B395 /* Pods-Carousell_demo_collectionView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carousell_demo_collectionView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Carousell_demo_collectionView/Pods-Carousell_demo_collectionView.debug.xcconfig"; sourceTree = "<group>"; };
 		57E29EC3F2269296A7A5A271 /* Pods-Carousell_demo_collectionView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carousell_demo_collectionView.release.xcconfig"; path = "Pods/Target Support Files/Pods-Carousell_demo_collectionView/Pods-Carousell_demo_collectionView.release.xcconfig"; sourceTree = "<group>"; };
 		8475B3A99794B61091FA5BB9 /* Pods_Carousell_demo_collectionView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carousell_demo_collectionView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +81,7 @@
 				1AC7066A1CB6071300C99792 /* PageCollectionViewCell.swift */,
 				1AC7066B1CB6071300C99792 /* PageCollectionViewCell.xib */,
 				1AC706681CB605D500C99792 /* RegistrationViewController.swift */,
+				1AC7066E1CB616F900C99792 /* ConstantCollectionView.swift */,
 			);
 			path = Carousell_demo_collectionView;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				1AC706651CB5FD5300C99792 /* LoginViewController.swift in Sources */,
 				1AC706531CB5FD3800C99792 /* AppDelegate.swift in Sources */,
 				1AC7066C1CB6071300C99792 /* PageCollectionViewCell.swift in Sources */,
+				1AC7066F1CB616F900C99792 /* ConstantCollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
