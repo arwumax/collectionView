@@ -23,9 +23,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return FBSDKApplicationDelegate.sharedInstance().application(application,didFinishLaunchingWithOptions: launchOptions)
     }
     
+
+
     func fbTokenChangeNoti(noti:NSNotification) {
         if FBSDKAccessToken.currentAccessToken() != nil {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let rootController = storyboard.instantiateViewControllerWithIdentifier("LoginViewController")
+            if self.window != nil {
+                self.window!.rootViewController = rootController
+                }
+            
+        } else if FBSDKAccessToken.currentAccessToken() == nil {
+            let storyboard = UIStoryboard(name: "Registration", bundle: nil)
+            let rootController = storyboard.instantiateViewControllerWithIdentifier("RegistrationViewController")
+            if self.window != nil {
+                self.window!.rootViewController = rootController
+            }
         }
+        
+  /*      func toggleRootView(storyboardName:String, viewControllerIdentifier: String) {
+            let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+            let rootController = storyboard.instantiateViewControllerWithIdentifier(viewControllerIdentifier)
+            if self.window != nil {
+                self.window!.rootViewController = rootController
+        } */
+        
     }
     
     

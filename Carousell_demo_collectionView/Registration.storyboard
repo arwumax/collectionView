@@ -9,7 +9,7 @@
         <!--Registration View Controller-->
         <scene sceneID="t7F-Uv-y6p">
             <objects>
-                <viewController id="Bwk-NK-4R1" customClass="RegistrationViewController" customModule="Carousell_demo_collectionView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegistrationViewController" id="Bwk-NK-4R1" customClass="RegistrationViewController" customModule="Carousell_demo_collectionView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="s4h-FW-y2P"/>
                         <viewControllerLayoutGuide type="bottom" id="DKO-HL-FWC"/>
@@ -18,17 +18,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="IoV-ob-hGz">
+                                <rect key="frame" x="280" y="460" width="39" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ceS-Wg-bbT"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" red="0.62639070679999997" green="0.62639070679999997" blue="0.62639070679999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="pageChanged:" destination="Bwk-NK-4R1" eventType="valueChanged" id="ejZ-Uy-tqY"/>
+                                </connections>
+                            </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdU-ae-whl" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="277" y="498" width="46" height="30"/>
+                                <rect key="frame" x="222" y="498" width="156" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="hoJ-1f-S7W"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZQ-G6-0TG">
-                                <rect key="frame" x="277" y="536" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="hf6-1c-frn"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                             </button>
@@ -75,17 +79,22 @@
                                     <outlet property="delegate" destination="Bwk-NK-4R1" id="n5L-QU-TaJ"/>
                                 </connections>
                             </collectionView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="IoV-ob-hGz">
-                                <rect key="frame" x="280" y="460" width="39" height="30"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZQ-G6-0TG">
+                                <rect key="frame" x="222" y="536" width="156" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="ceS-Wg-bbT"/>
+                                    <constraint firstAttribute="height" constant="30" id="hf6-1c-frn"/>
                                 </constraints>
-                                <color key="pageIndicatorTintColor" red="0.62639070679999997" green="0.62639070679999997" blue="0.62639070679999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="pageChanged:" destination="Bwk-NK-4R1" eventType="valueChanged" id="ejZ-Uy-tqY"/>
-                                </connections>
-                            </pageControl>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Sign up or Log in Email">
+                                    <color key="titleColor" red="1" green="0.96116357109999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="hf6-1c-frn"/>
+                                    </mask>
+                                </variation>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -107,20 +116,23 @@
                             <constraint firstItem="DKO-HL-FWC" firstAttribute="top" secondItem="MLG-8L-vmu" secondAttribute="bottom" constant="5" id="kA4-zN-tZo"/>
                             <constraint firstAttribute="trailing" secondItem="OQu-uZ-bGO" secondAttribute="trailing" id="qW0-K5-Fzt"/>
                             <constraint firstItem="9uO-Oo-sJY" firstAttribute="centerY" secondItem="MLG-8L-vmu" secondAttribute="centerY" id="sLx-yV-src"/>
+                            <constraint firstItem="hZQ-G6-0TG" firstAttribute="width" secondItem="zdU-ae-whl" secondAttribute="width" id="vEb-JJ-uf8"/>
+                            <constraint firstItem="hZQ-G6-0TG" firstAttribute="height" secondItem="zdU-ae-whl" secondAttribute="height" id="xpt-nG-7Fb"/>
                             <constraint firstItem="zdU-ae-whl" firstAttribute="top" secondItem="IoV-ob-hGz" secondAttribute="bottom" constant="8" id="y1r-e5-z10"/>
                             <constraint firstItem="hZQ-G6-0TG" firstAttribute="leading" secondItem="eax-Hx-dfv" secondAttribute="leadingMargin" constant="45" id="zUM-G4-219"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="R7G-Bu-Fga"/>
+                                <exclude reference="zUM-G4-219"/>
                                 <exclude reference="ZSV-li-pbo"/>
                                 <exclude reference="dCF-5y-oJU"/>
                                 <exclude reference="i0c-vy-b9a"/>
-                                <exclude reference="R7G-Bu-Fga"/>
-                                <exclude reference="zUM-G4-219"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="emailLoginButton" destination="hZQ-G6-0TG" id="b1d-j6-x5H"/>
                         <outlet property="layout" destination="vTS-fh-Qcj" id="ji8-rz-mqj"/>
                         <outlet property="registrationPage" destination="IoV-ob-hGz" id="9AQ-fb-w8v"/>
                         <outlet property="tutorialCollectionView" destination="OQu-uZ-bGO" id="dSP-A3-Wbd"/>

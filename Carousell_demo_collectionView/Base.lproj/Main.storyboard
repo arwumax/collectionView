@@ -3,12 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="he4-r1-m8b">
             <objects>
-                <viewController id="pAR-hB-BN0" customClass="LoginViewController" customModule="Carousell_demo_collectionView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="pAR-hB-BN0" customClass="LoginViewController" customModule="Carousell_demo_collectionView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FOl-2e-24z"/>
                         <viewControllerLayoutGuide type="bottom" id="V7S-Ev-3dT"/>
@@ -16,7 +17,31 @@
                     <view key="view" contentMode="scaleToFill" id="LfM-Bd-2bW">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Max's App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qy5-ft-570">
+                                <rect key="frame" x="213" y="289" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KxU-B8-M2b" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="277" y="345" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KxU-B8-M2b" firstAttribute="top" secondItem="Qy5-ft-570" secondAttribute="bottom" constant="7.5" id="1an-j5-mkW"/>
+                            <constraint firstItem="Qy5-ft-570" firstAttribute="centerX" secondItem="LfM-Bd-2bW" secondAttribute="centerX" id="fcw-p6-Kom"/>
+                            <constraint firstItem="KxU-B8-M2b" firstAttribute="centerX" secondItem="LfM-Bd-2bW" secondAttribute="centerX" id="oun-Se-iW0"/>
+                            <constraint firstItem="KxU-B8-M2b" firstAttribute="centerY" secondItem="LfM-Bd-2bW" secondAttribute="centerY" multiplier="1.2" id="qIc-yr-onQ"/>
+                            <constraint firstItem="Qy5-ft-570" firstAttribute="centerY" secondItem="LfM-Bd-2bW" secondAttribute="centerY" id="w1J-Pt-upy"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1an-j5-mkW"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RLF-h1-Trb" userLabel="First Responder" sceneMemberID="firstResponder"/>

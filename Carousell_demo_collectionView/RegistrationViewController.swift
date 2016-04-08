@@ -20,6 +20,7 @@ class RegistrationViewController: UIViewController, UICollectionViewDataSource, 
     
     @IBOutlet weak var tutorialCollectionView: UICollectionView!
     
+    @IBOutlet weak var emailLoginButton: UIButton!
 
     
     let pages = [[Constants.image: "p8", Constants.title:"How're you?", Constants.description: "Good morning"],[Constants.image: "p9", Constants.title:"How're you?", Constants.description: "Good morning"],[Constants.image: "p7", Constants.title:"How're you?", Constants.description: "Good morning"],[Constants.image: "p6", Constants.title:"How're you?", Constants.description: "Good morning"]]
@@ -34,6 +35,8 @@ class RegistrationViewController: UIViewController, UICollectionViewDataSource, 
         self.layout.itemSize = CGSize(width: UIScreen.mainScreen().bounds.width, height: UIScreen.mainScreen().bounds.height-148)
         
         self.registrationPage.numberOfPages = self.pages.count
+        
+        self.emailLoginButton.layer.cornerRadius = 5
         
         
     }

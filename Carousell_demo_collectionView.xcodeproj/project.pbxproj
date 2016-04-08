@@ -78,9 +78,9 @@
 				1AC7065B1CB5FD3800C99792 /* LaunchScreen.storyboard */,
 				1AC7065E1CB5FD3800C99792 /* Info.plist */,
 				1AC706661CB5FDB100C99792 /* Registration.storyboard */,
+				1AC706681CB605D500C99792 /* RegistrationViewController.swift */,
 				1AC7066A1CB6071300C99792 /* PageCollectionViewCell.swift */,
 				1AC7066B1CB6071300C99792 /* PageCollectionViewCell.xib */,
-				1AC706681CB605D500C99792 /* RegistrationViewController.swift */,
 				1AC7066E1CB616F900C99792 /* ConstantCollectionView.swift */,
 			);
 			path = Carousell_demo_collectionView;
