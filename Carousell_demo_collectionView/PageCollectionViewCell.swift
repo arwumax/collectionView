@@ -19,6 +19,14 @@ class PageCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        let gradient: CAGradientLayer = CAGradientLayer()
+        gradient.frame = UIScreen.mainScreen().bounds
+
+        gradient.colors = [UIColor(red: 255.0/255.0, green: 227.0/255.0, blue: 0.0/255.0, alpha: 0.1).CGColor, UIColor(red: 35.0/255.0, green: 2.0/255.0, blue: 2.0/255.0, alpha: 0.8).CGColor]
+        pageImageView.layer.insertSublayer(gradient, atIndex: 0)
+        
+        
     }
 
 }

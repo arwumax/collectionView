@@ -32,13 +32,28 @@ class RegistrationViewController: UIViewController, UICollectionViewDataSource, 
     //將colletionViewcell註冊去呢個collectionView入面
         self.tutorialCollectionView.registerNib(UINib(nibName: "PageCollectionViewCell", bundle: nil),forCellWithReuseIdentifier: pageCellReuseIdentifier)
         
-        self.layout.itemSize = CGSize(width: UIScreen.mainScreen().bounds.width, height: UIScreen.mainScreen().bounds.height-148)
+        self.layout.itemSize = CGSize(width: UIScreen.mainScreen().bounds.width, height: UIScreen.mainScreen().bounds.height)
         
         self.registrationPage.numberOfPages = self.pages.count
         
+        self.setUpLoginWithEmailButton()
+    
+    }
+    
+    private func setUpLoginWithEmailButton() {
         self.emailLoginButton.layer.cornerRadius = 5
+        let whiteAndBaseline = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSBaselineOffsetAttributeName: 2]
         
         
+        let buttonTitle = NSMutableAttributedString(string: "  " + "Sign up or Log in ")
+        let boldEmail = NSAttributedString(string: "Email", attributes: [NSFontAttributeName: UIFont.boldSystemFontOfSize(18.0)])
+        
+        
+        
+        buttonTitle.addAttributes(whiteAndBaseline, range: NSRange(location: 0,length: buttonTitle.length-1))
+        
+        buttonTitle.appendAttributedString(boldEmail)
+        self.emailLoginButton.setAttributedTitle(buttonTitle, forState: .Normal)
     }
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {

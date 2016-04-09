@@ -71,19 +71,27 @@
 		1AC706511CB5FD3800C99792 /* Carousell_demo_collectionView */ = {
 			isa = PBXGroup;
 			children = (
+				1AC706701CB8F01600C99792 /* Registration */,
 				1AC706521CB5FD3800C99792 /* AppDelegate.swift */,
 				1AC706561CB5FD3800C99792 /* Main.storyboard */,
 				1AC706641CB5FD5300C99792 /* LoginViewController.swift */,
 				1AC706591CB5FD3800C99792 /* Assets.xcassets */,
 				1AC7065B1CB5FD3800C99792 /* LaunchScreen.storyboard */,
 				1AC7065E1CB5FD3800C99792 /* Info.plist */,
-				1AC706661CB5FDB100C99792 /* Registration.storyboard */,
-				1AC706681CB605D500C99792 /* RegistrationViewController.swift */,
-				1AC7066A1CB6071300C99792 /* PageCollectionViewCell.swift */,
-				1AC7066B1CB6071300C99792 /* PageCollectionViewCell.xib */,
-				1AC7066E1CB616F900C99792 /* ConstantCollectionView.swift */,
 			);
 			path = Carousell_demo_collectionView;
+			sourceTree = "<group>";
+		};
+		1AC706701CB8F01600C99792 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				1AC706681CB605D500C99792 /* RegistrationViewController.swift */,
+				1AC7066A1CB6071300C99792 /* PageCollectionViewCell.swift */,
+				1AC7066E1CB616F900C99792 /* ConstantCollectionView.swift */,
+				1AC706661CB5FDB100C99792 /* Registration.storyboard */,
+				1AC7066B1CB6071300C99792 /* PageCollectionViewCell.xib */,
+			);
+			name = Registration;
 			sourceTree = "<group>";
 		};
 		C1F7F8240F28E1C32D5BCF20 /* Frameworks */ = {

@@ -16,25 +16,14 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cvu-C1-O8u">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                     </imageView>
-                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iCa-KS-AmE">
-                        <rect key="frame" x="0.0" y="234" width="300" height="66"/>
-                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Xio-xN-oYh">
-                            <rect key="frame" x="0.0" y="0.0" width="300" height="66"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        </view>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="66" id="GDq-vZ-kpn"/>
-                        </constraints>
-                        <blurEffect style="light"/>
-                    </visualEffectView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuT-q6-2Xi">
-                        <rect key="frame" x="8" y="242" width="284" height="21"/>
+                        <rect key="frame" x="8" y="102" width="284" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bjn-SY-KFf">
-                        <rect key="frame" x="8" y="271" width="284" height="21"/>
+                        <rect key="frame" x="8" y="131" width="284" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -54,12 +43,9 @@
                 <constraint firstAttribute="trailing" secondItem="Bjn-SY-KFf" secondAttribute="trailing" constant="8" id="YiW-uz-t3W"/>
                 <constraint firstAttribute="bottom" secondItem="cvu-C1-O8u" secondAttribute="bottom" id="Ztq-Rf-fiY"/>
                 <constraint firstItem="Bjn-SY-KFf" firstAttribute="top" secondItem="CuT-q6-2Xi" secondAttribute="bottom" constant="8" id="e7z-3t-DhU"/>
-                <constraint firstAttribute="bottom" secondItem="iCa-KS-AmE" secondAttribute="bottom" id="eCj-Qz-fdy"/>
                 <constraint firstItem="cvu-C1-O8u" firstAttribute="leading" secondItem="CuT-q6-2Xi" secondAttribute="trailing" constant="-50" id="hJd-Zl-rDP"/>
                 <constraint firstAttribute="trailing" secondItem="cvu-C1-O8u" secondAttribute="trailing" id="nxq-NI-SQA"/>
-                <constraint firstAttribute="trailing" secondItem="iCa-KS-AmE" secondAttribute="trailing" id="oyL-Yl-wzZ"/>
-                <constraint firstAttribute="bottom" secondItem="Bjn-SY-KFf" secondAttribute="bottom" constant="8" id="ujt-ae-wHW"/>
-                <constraint firstItem="iCa-KS-AmE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="wsO-4U-vuG"/>
+                <constraint firstAttribute="bottom" secondItem="Bjn-SY-KFf" secondAttribute="bottom" constant="148" id="ujt-ae-wHW"/>
             </constraints>
             <size key="customSize" width="531" height="475"/>
             <variation key="default">
